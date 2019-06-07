@@ -7,11 +7,11 @@ import java.util.Stack;
 /**
  * Created by chan
  * Date: 2019/6/7 10:59
- * Description:
+ * Description: 有效的括号
  */
-public class LeetcodeNo2 {
+public class LeetcodeNo20 {
 
-    public static boolean isValid(String s) {
+    public boolean isValid(String s) {
         Map<Character,Character> map = new HashMap<>();
         map.put(']', '[');
         map.put('}', '{');
@@ -36,6 +36,6 @@ public class LeetcodeNo2 {
 
     public static void main(String[] args) {
         String str = ")[";
-        System.out.println(isValid(str));
+        System.out.println(new LeetcodeNo20().isValid(str));
     }
 }

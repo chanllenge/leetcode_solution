@@ -3,11 +3,11 @@ package List;
 /**
  * Created by chan
  * Date: 2019/6/7 10:58
- * Description:
+ * Description:删除链表的倒数第N个节点
  */
 public class LeetcodeNo19 {
 
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode node = dummy;
@@ -30,7 +30,7 @@ public class LeetcodeNo19 {
     public static void main(String[] args) {
         int[] a = {1, 2};
         ListNode head = ListNode.construct(a);
-        ListNode result = removeNthFromEnd(head, 2);
+        ListNode result = new LeetcodeNo19().removeNthFromEnd(head, 2);
         ListNode.printList(result);
     }
 }
