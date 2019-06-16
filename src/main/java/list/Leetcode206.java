@@ -1,4 +1,4 @@
-package List;
+package list;
 
 /**
  * Created by chan
