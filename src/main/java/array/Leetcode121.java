@@ -10,13 +10,9 @@ public class Leetcode121 {
         if (prices == null || prices.length == 0) return 0;
         int min = prices[0];
         int max = 0;
-        int i = 0;
-        while (i < prices.length) {
-            while (prices[i] >= min && i + 1 <= prices.length - 1) i++;
-            min = prices[i];
-            while (i + 1 <= prices.length - 1 && prices[i + 1] > prices[i]) i++;
-            if (prices[i] - min > max) max = prices[i] - min;
-            i++;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] < min) min = prices[i];
+            else if (prices[i] - min > max) max = prices[i] - min;
         }
         return max;
     }
