@@ -37,9 +37,11 @@ public class TreeNode {
         }
         //处理最后一个节点的情况
         int lastParentIndex = a.length / 2 - 1;
-        list.get(lastParentIndex).left = list.get(lastParentIndex * 2 + 1);
-        if (a.length % 2 == 1) {
-            list.get(lastParentIndex).right = list.get(lastParentIndex * 2 + 2);
+        if (list.get(lastParentIndex) != null) {
+            list.get(lastParentIndex).left = list.get(lastParentIndex * 2 + 1);
+            if (a.length % 2 == 1) {
+                list.get(lastParentIndex).right = list.get(lastParentIndex * 2 + 2);
+            }
         }
         return list.get(0);
     }
